@@ -10,7 +10,7 @@ function formatTime(seconds) {
 
 async function getSongs() {
     // Fetch the list of songs
-    let a = await fetch("http://127.0.0.1:5500/songs/");
+    let a = await fetch("http://127.0.0.1:5500/Spotify_Clone/songs/");
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
