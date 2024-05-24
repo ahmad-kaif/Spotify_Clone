@@ -25,7 +25,7 @@ async function getSongs() {
 }
 
 const playMusic = (track, pause = false) => {
-    currentSong.src = "/songs/" + track;
+    currentSong.src = "/Spotify_Clone/songs/" + track;
     if (!pause) {
         currentSong.play();
         play.src = "pause.svg";
