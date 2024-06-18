@@ -10,7 +10,7 @@ function formatTime(seconds) {
 
 async function getSongs() {
     // Fetch the list of songs
-    let a = await fetch("http://127.0.0.1:5500/Spotify_Clone/songs/");
+    let a = await fetch("http://127.0.0.1:5500/songs/");
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -25,7 +25,7 @@ async function getSongs() {
 }
 
 const playMusic = (track, pause = false) => {
-    currentSong.src = "/Spotify_Clone/songs/" + track;
+    currentSong.src = "/songs/" + track;
     if (!pause) {
         currentSong.play();
         play.src = "pause.svg";
